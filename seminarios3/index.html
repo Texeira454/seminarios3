@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caminho do Saber</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="tela-inicial">
+    <h1>🌈 Caminho do Saber</h1>
+    <button onclick="mostrarMapa()">🚀 Começar</button>
+  </div>
+
+  <div id="mapa">
+    <button id="sair" onclick="voltarMenu()">🚪 Sair</button>
+
+    <div class="fase" style="top: 80%; left: 20%;">1</div>
+    <div class="fase" style="top: 70%; left: 40%;">2</div>
+    <div class="fase" style="top: 60%; left: 30%;">3</div>
+    <div class="fase" style="top: 50%; left: 50%;">4</div>
+    <div class="fase" style="top: 40%; left: 40%;">5</div>
+    <div class="fase" style="top: 30%; left: 60%;">6</div>
+    <div class="fase" style="top: 20%; left: 50%;">7</div>
+    <div class="fase" style="top: 10%; left: 70%;">8</div>
+  </div>
+
+  <div id="tela-quiz" style="display: none; background: #f0f8ff; padding: 20px; text-align: center; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h2>Desafio da Fase <span id="numero-fase"></span></h2>
+    <h2 id="pergunta" style="margin-top: 20px; color: #007bff;"></h2>
+    <div id="respostas" style="margin-top: 20px;">
+      </div>
+    <p id="feedback" style="margin-top: 20px; font-weight: bold; font-size: 1.2rem;"></p>
+    
+    <button id="proxima-pergunta" style="margin-top: 30px; display: none;">Próxima Pergunta &gt;</button>
+    
+    <button id="voltar-mapa" onclick="trocarTela('mapa')" style="margin-top: 10px;">&lt; Voltar ao Mapa</button>
+  </div>
+  
+  <div id="tela-resultado" style="display: none; background: #fff8e1; padding: 20px; text-align: center; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h2>🎉 Resultado da Fase <span id="resultado-fase-numero"></span>!</h2>
+    <div id="placar-final" style="margin: 30px 0; font-size: 1.5rem;">
+      <p>✅ Acertos: <span id="acertos-count" style="color: limegreen; font-weight: bold;">0</span></p>
+      <p>❌ Erros: <span id="erros-count" style="color: red; font-weight: bold;">0</span></p>
+    </div>
+    <p id="elogio" style="font-size: 1.8rem; font-weight: bold; color: #007bff; margin-bottom: 40px;">Você teve um ótimo desempenho!</p>
+    
+    <button id="resultado-proxima-fase" style="display: none;">Ir para a Próxima Fase &gt;</button>
+    
+    <button onclick="reiniciarJogo()" style="margin-top: 20px; background-color: #f44336; font-size: 1.5rem;">🔁 Reiniciar Jogo</button>
+  </div>
+    
+    <button onclick="trocarTela('mapa')" style="margin-top: 10px;">Voltar ao Mapa</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="quis.js"></script>
+</body>
+</html>
