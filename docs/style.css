@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+#tela-inicial {
+  background: url('imagens/telainicial.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tela-inicial h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  margin-bottom: 40px;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+#mapa {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #6fd25a url('imagens/mapajogo.gif') no-repeat center center fixed;
+  background-size: contain;
+}
+
+#voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#voltar:hover {
+  background-color: rgba(0,0,0,0.9);
+  transform: scale(1.1);
+}
+
+#voltar img {
+  width: 20px;
+  height: 20px;
+}
+
+#sair {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#sair:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+
+.fase {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 123, 255, 0.9);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 3px solid #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.fase:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 180, 255, 1);
+}
+
+.fase.ativa {
+  background-color: limegreen;
+}
+
+.fase.completa {
+  background-color: #ffd700; 
+  border-color: #ff9900;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+}
+
+.fase.completa:hover {
+  background-color: #ffc400;
+}
